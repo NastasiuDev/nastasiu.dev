@@ -1,0 +1,212 @@
+footer,main {
+  display: block;
+}
+
+[hidden] {
+  display: none;
+}
+
+a {
+  background: 0 0;
+}
+
+a:active,a:hover {
+  outline: 0;
+}
+
+img {
+  border: 0;
+}
+
+/**
+ * 1. Customize `background` for text selections
+ * 2. Remove `text-shadow` selection highlight - http://cbrac.co/Q6swON
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  /* 1 */
+  text-shadow: none;
+  /* 2 */
+}
+
+::selection {
+  background: #b3d4fc;
+  /* 1 */
+  text-shadow: none;
+  /* 2 */
+}
+
+/* Change `background` for text selections when browser is unfocused */
+
+::selection:window-inactive {
+  background: #dedede;
+}
+
+/* Remove `background` on images when selected */
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+p {
+	margin: 0;
+}
+
+body {
+  color: #444;
+  font-size: 1rem;
+  font-family: "Palatino", serif;
+  line-height: 1.5;
+}
+
+main {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/**
+ * Links ($links)
+ */
+
+a {
+  color: #2A2D31;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 1px dotted #222;
+}
+
+summary,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+  margin: 0 0 0.75rem;
+  color: #222;
+  font-weight: 600;
+  line-height: 1.333;
+  text-rendering: optimizeLegibility;
+}
+
+summary {
+	margin: 0;
+	cursor: pointer;
+	user-select: none;
+}
+
+summary::after {
+	font-size: 0.875rem;
+	content: "↓";
+	margin-left: 0.5rem;
+}
+
+summary + * {
+	margin-top: 0.75rem;
+}
+
+details {
+	margin: 1rem 0 0;
+}
+
+details[open] summary::after {
+	content: "↑";
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.875rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+h4,.h4,h5,.h5,h6,.h6 {
+  font-size: 1rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 73.125rem;
+  min-height: 100%;
+  width: 100%;
+}
+
+#services {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  max-width: 580px;
+}
+
+#services h2 {
+  color: #2A2D31;
+  padding: 0 0 15px 0;
+}
+
+#services h3 {
+  color: #2A2D31;
+}
+
+footer {
+  font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  background: #26292e;
+  background-repeat: repeat;
+  height: 6rem;
+  align-content: center;
+  margin: 0;
+}
+
+.fa-copyright,.fa-copyright i {
+  font-style: normal;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.fa-copyright a {
+  padding-left: 5px;
+}
+
+.fa-copyright {
+  padding-top: 50px;
+}
+
+#services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.divider {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 2rem auto 1rem;
+  text-align: center;
+  border-top: 1px solid #2A2D31;
+}
