@@ -15,7 +15,7 @@ export const renderer = jsxRenderer(({ children }) => {
       </head>
       <body>{children}</body>
       <script defer data-domain="nastasiu.dev" src="https://data.websquad.ro/js/script.file-downloads.outbound-links.js"></script>
-      <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+      <script defer src="/static/script.js"></script>
     </html>
   )
 })
