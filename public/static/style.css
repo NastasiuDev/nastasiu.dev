@@ -210,3 +210,9 @@ footer {
   text-align: center;
   border-top: 1px solid #2A2D31;
 }
+
+@media screen and (max-width: 1024px) {
+	h1 {
+		font-size: 2rem;
+	}
+}
