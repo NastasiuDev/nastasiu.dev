@@ -60,9 +60,10 @@ p {
 body {
   color: #eaeaea;
   font-size: 1rem;
-  background-color: #021D8A;
   font-family: "Palatino", serif;
   line-height: 1.5;
+  background: #252528 radial-gradient(#252528, #0b0b0f);
+  background-attachment: fixed;
 }
 
 main {
@@ -184,8 +185,9 @@ footer {
   font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
   font-weight: normal;
   text-align: center;
-  background: #031371;
-  background-repeat: repeat;
+  background: rgba(0,0,0,0.25);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   margin: 0;
   min-height: 6rem;
 }
