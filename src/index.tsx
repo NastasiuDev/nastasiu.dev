@@ -13,14 +13,15 @@ app.get('/', (c) => {
 	    <p>We're back, and we're offering:</p>
 	    <details>
 		<summary>Hosting services</summary>
-		<p>Website, web apps, email server</p>
-		<p>Host debugging <br /><small>checking if your website or webapp has enough resources on your current host</small></p>
+		<p>Websites, web apps, email server</p>
+		<p>Host debugging <br/>
+			<small>checking if your website or webapp has enough resources on your current host</small>
+		</p>
 	    </details>
             <details>
 		<summary>Project management consultancy</summary>
 		<p>Comprehensive and actionable project management audits</p>
-		<p>Timeline assessment and consulting on best practices for team management</p>
-		<p><small>Guidance in setting up a robust framework for managing web development teams</small></p>
+		<p><small>Guidance in setting up a robust framework for managing web development projects</small></p>
 	    </details>
 	    <div class="divider"></div>
 	    <details>
