@@ -1,6 +1,5 @@
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
-import { bearerAuth } from 'hono/bearer-auth'
 import { renderer } from './renderer'
 
 const app = new Hono()
