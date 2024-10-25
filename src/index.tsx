@@ -62,13 +62,13 @@ app.all('/deploy/marblecreative', async (c) => {
 	const response = await fetch('https://app.coolify.io/api/v1/deploy?uuid=t8kwc4kk8kg0csss0csw4gck&force=false', {
 		method: 'GET',
 		headers: {
-		  'Authorization': `Bearer ${process.env.COOLIFY_TOKEN}`,
+		  'Authorization': `Bearer ${c.env.COOLIFY_TOKEN}`,
 		  'Content-Type': 'application/json'
 		}
 	  });
 
 	  let data = await response.json();
-	  return c.json([data, process.env.COOLIFY_TOKEN]);
+	  return c.json([data, c.env.COOLIFY_TOKEN]);
 })
 app.all('/deploy/marbleldn', (c) => {
   return c.json({ success: true })
