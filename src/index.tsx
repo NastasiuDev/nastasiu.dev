@@ -1,4 +1,5 @@
 import { Hono } from 'hono'
+import { cors } from 'hono/cors'
 import { renderer } from './renderer'
 
 const app = new Hono()
@@ -46,6 +47,21 @@ app.get('/', (c) => {
     </main>
   )
 
+})
+
+app.use(
+  '/api/*',
+  cors({
+    origin: 'http://admin.marblecreative.com',
+    allowMethods: ['GET']
+  })
+)
+
+app.all('/api/marblecreative', (c) => {
+  return c.json({ success: true })
+})
+app.all('/api/marbleldn', (c) => {
+  return c.json({ success: true })
 })
 
 export default app
