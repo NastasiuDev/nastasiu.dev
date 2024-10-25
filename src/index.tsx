@@ -68,7 +68,7 @@ app.all('/deploy/marblecreative', async (c, env) => {
 	  });
 
 	  let data = await response.json();
-	  return c.json(data);
+	  return c.json([data, env.COOLIFY_TOKEN]);
 })
 app.all('/deploy/marbleldn', (c) => {
   return c.json({ success: true })
