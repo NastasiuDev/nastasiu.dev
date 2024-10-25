@@ -70,8 +70,17 @@ app.all('/deploy/marblecreative', async (c) => {
 	  let data = await response.json();
 	  return c.json(data);
 })
-app.all('/deploy/marbleldn', (c) => {
-  return c.json({ success: true })
+app.all('/deploy/marbleldn', async (c) => {
+	const response = await fetch('https://app.coolify.io/api/v1/deploy?uuid=m4csg44sk48844wwks8ckso8&force=false', {
+		method: 'GET',
+		headers: {
+		  'Authorization': `Bearer ${c.env.COOLIFY_TOKEN}`,
+		  'Content-Type': 'application/json'
+		}
+	  });
+
+	  let data = await response.json();
+	  return c.json(data);
 })
 
 export default app
