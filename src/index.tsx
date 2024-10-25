@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
+import { bearerAuth } from 'hono/bearer-auth'
 import { renderer } from './renderer'
 
 const app = new Hono()
@@ -57,8 +58,17 @@ app.use(
   })
 )
 
-app.all('/deploy/marblecreative', (c) => {
-  return c.json({ success: true })
+app.all('/deploy/marblecreative', async (c) => {
+	const response = await fetch('https://app.coolify.io/api/v1/deploy?uuid=t8kwc4kk8kg0csss0csw4gck&force=false', {
+		method: 'GET',
+		headers: {
+		  'Authorization': `Bearer ${process.env.COOLIFY_TOKEN}`,
+		  'Content-Type': 'application/json'
+		}
+	  });
+
+	  const data = await response.json();
+	  return c.json(data);
 })
 app.all('/deploy/marbleldn', (c) => {
   return c.json({ success: true })
