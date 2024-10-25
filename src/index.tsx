@@ -53,7 +53,7 @@ app.get('/', (c) => {
 app.use(
   '/deploy/*',
   cors({
-    origin: ['http://admin.marblecreative.com', 'https://wp.test'],
+    origin: ['http://admin.marblecreative.com', 'https://backend.marbleldn.com/'],
     allowMethods: ['GET']
   })
 )
