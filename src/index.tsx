@@ -50,17 +50,17 @@ app.get('/', (c) => {
 })
 
 app.use(
-  '/api/*',
+  '/deploy/*',
   cors({
-    origin: 'http://admin.marblecreative.com',
+    origin: ['http://admin.marblecreative.com', 'https://wp.test'],
     allowMethods: ['GET']
   })
 )
 
-app.all('/api/marblecreative', (c) => {
+app.all('/deploy/marblecreative', (c) => {
   return c.json({ success: true })
 })
-app.all('/api/marbleldn', (c) => {
+app.all('/deploy/marbleldn', (c) => {
   return c.json({ success: true })
 })
 
